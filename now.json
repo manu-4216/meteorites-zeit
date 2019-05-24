@@ -1,0 +1,9 @@
+{
+  "version": 2,
+  "name": "manu4216-meteorites",
+  "builds": [
+    { "src": "search.js", "use": "@now/node" },
+    { "src": "index.html", "use": "@now/static" }
+  ],
+  "routes": [{ "src": "/search", "dest": "search.js" }]
+}

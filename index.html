@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+
+<head>
+  <script
+    type="text/javascript"
+    src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/3.0.1/mustache.js"
+  ></script>
+
+  <style>
+    h1 {
+      text-align: center;
+    }
+
+    table,
+    th,
+    td {
+      border: 1px solid black;
+      border-collapse: collapse;
+      padding-left: 6px;
+    }
+
+    label {
+      display: block;
+      margin-top: 10px;
+      font-size: 15px;
+      font-weight: bold;
+    }
+
+    #form {
+      margin: 10px auto 30px;
+      border: 1px solid gray;
+      border-radius: 3px;
+      padding: 5px 20px 20px;
+    }
+
+    .group {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .group > div {
+      margin-right: 10px;
+    }
+
+    input,
+    select {
+      padding: 5px 10px;
+      border-radius: 3px;
+      outline: none;
+      border: 1px solid #6d6c6c;
+    }
+
+    select {
+      background: #eae8e8;
+    }
+
+    input[type='submit'] {
+      margin-top: 10px;
+      padding: 9px 13px;
+      color: white;
+      background: #2b2828;
+      border-radius: 4px;
+      border: 1px solid gray;
+      cursor: pointer;
+      outline: none;
+      height: 3em;
+    }
+
+    input[type='checkbox'] {
+      margin-top: 7px;
+    }
+
+    .error {
+      color: red;
+      border: 1px solid red;
+    }
+
+    #error {
+      color: red;
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Meteorites list</h1>
+
+  <main>
+    <form id="form">
+      <div class="group">
+        <div>
+          <label>Search query:</label>
+          <input type="search" name="query" placeholder="Search here" autocomplete="off" />
+        </div>
+
+        <div>
+          <label>Exact word match?</label>
+          <input type="checkbox" id="isWordQuery" name="isWordQuery" checked />
+        </div>
+      </div>
+
+      <div class="group">
+        <div>
+          <label>Offset:</label>
+          <input type="input" name="offset" value="0" autocomplete="off" />
+        </div>
+
+        <div>
+          <label>Limit:</label>
+          <select name="limit">
+            <option value="10">10</option>
+            <option value="20" selected>20</option>
+            <option value="30">30</option>
+            <option value="50">50</option>
+            <option value="100">100</option>
+            <option value="500">500</option>
+            <option value="1000">1000</option>
+          </select>
+        </div>
+
+        <div>
+          <label>Sort type:</label>
+          <select name="sort">
+            <option value="1" selected>ascending</option>
+            <option value="-1">descending</option>
+          </select>
+        </div>
+      </div>
+
+      <input type="submit" value="Search" />
+    </form>
+
+    <div id="error"></div>
+
+    <table id="table" style="width:100%">
+      <tr>
+        <th>Name</th>
+        <th>Mass (g)</th>
+        <th>Recclass</th>
+        <th>Year</th>
+        <!-- Here there will the data rendered from the template -->
+      </tr>
+    </table>
+
+    <div id="loading"></div>
+  </main>
+
+  <script id="meteorite-template" type="text/template">
+    <tr>
+        <td>{{name}}</td>
+        <td>{{mass (g)}}</td>
+        <td>{{recclass}}</td>
+        <td>{{year}}</td>
+    </tr>
+  </script>
+
+  <script>
+    const form = document.querySelector('#form');
+    const table = document.querySelector('#table');
+    const loading = document.querySelector('#loading');
+    const error = document.querySelector('#error');
+    const tableHeader = `
+      <tr>
+        <th>Name</th>
+        <th>Mass (g)</th>
+        <th>Recclass</th>
+        <th>Date</th>
+      </tr>
+    `;
+
+    // Launch a search at start
+    executeSearch();
+
+    form.addEventListener('submit', executeSearch);
+
+    function executeSearch(event) {
+      event && event.preventDefault();
+
+      const data = new URLSearchParams();
+
+      for (const pair of new FormData(form)) {
+        data.append(pair[0], pair[1]);
+      }
+
+      // reset the table
+      table.innerHTML = tableHeader;
+      loading.innerText = 'Loading...';
+      error.innerText = '';
+
+      const errorElem = document.querySelector('.error');
+
+      errorElem && errorElem.classList.remove('error');
+      let isError = false;
+      let response = {};
+
+      fetch('/search', { method: 'POST', body: data })
+        .then(function(response) {
+          if (!response.ok) {
+            isError = true;
+          }
+
+          return response.json();
+        })
+        .then(function(myJson) {
+          if (isError) {
+            response = myJson;
+            throw Error();
+          }
+
+          const template = document.querySelector('#meteorite-template').innerHTML;
+          loading.innerText = '';
+          error.innerText = '';
+
+          if (myJson.result.length === 0) {
+            error.innerText =
+              'No result. Try with a different query, or disable the "Exact word match" checkbox';
+          }
+
+          myJson.result.forEach(item => {
+            item.year = item.year.substring(0, 10);
+            const rendered = Mustache.render(template, item);
+            table.innerHTML += rendered || '';
+          });
+        })
+        .catch(err => {
+          const { field, error: errorMessage } = response;
+
+          loading.innerText = '';
+          error.innerText = errorMessage || err;
+          field && form.elements[field].classList.add('error');
+          console.error('Error:', errorMessage || err);
+        });
+    }
+  </script>
+</body>

@@ -1,0 +1,641 @@
+{
+  "meta" : {
+    "view" : {
+      "id" : "gh4g-9sfh",
+      "name" : "Meteorite Landings",
+      "attributionLink" : "http://visualizing.org/datasets/meteorite-landings",
+      "averageRating" : 0,
+      "category" : "Space Science",
+      "createdAt" : 1427993711,
+      "description" : "This comprehensive data set from The Meteoritical Society contains information on all of the known meteorite landings. The Fusion Table is collected by Javier de la Torre and we've also provided an XLS file that consists of 34,513 meteorites and includes the following fields:\r\nplace\r\ntype_of_meteorite\r\nmass_g\r\nfell_found\r\nyear\r\ndatabase\r\ncoordinate_1\r\ncoordinates_2\r\ncartodb_id\r\ncreated_at\r\nupdated_at\r\nyear_date\r\nlongitude\r\nlatitude\r\ngeojson\r\n\r\n**5/14/13\r\nPlease find an updated data set from The Meteoritical Society that includes more recent meteorites. Under NameType, 'valid' is for most meteorites and 'relict' are for objects that were once meteorites but are now highly altered by weathering on Earth.\r\n\r\nhttp://visualizing.org/datasets/meteorite-landings",
+      "displayType" : "table",
+      "downloadCount" : 12593,
+      "hideFromCatalog" : false,
+      "hideFromDataJson" : false,
+      "indexUpdatedAt" : 1530128561,
+      "newBackend" : true,
+      "numberOfComments" : 0,
+      "oid" : 12394300,
+      "provenance" : "official",
+      "publicationAppendEnabled" : false,
+      "publicationDate" : 1437418476,
+      "publicationGroup" : 2592752,
+      "publicationStage" : "published",
+      "rowClass" : "",
+      "rowsUpdatedAt" : 1437418165,
+      "rowsUpdatedBy" : "isxt-qkkm",
+      "tableId" : 3654362,
+      "totalTimesRated" : 0,
+      "viewCount" : 47657,
+      "viewLastModified" : 1530128442,
+      "viewType" : "tabular",
+      "columns" : [ {
+        "id" : -1,
+        "name" : "sid",
+        "dataTypeName" : "meta_data",
+        "fieldName" : ":sid",
+        "position" : 0,
+        "renderTypeName" : "meta_data",
+        "format" : { },
+        "flags" : [ "hidden" ]
+      }, {
+        "id" : -1,
+        "name" : "id",
+        "dataTypeName" : "meta_data",
+        "fieldName" : ":id",
+        "position" : 0,
+        "renderTypeName" : "meta_data",
+        "format" : { },
+        "flags" : [ "hidden" ]
+      }, {
+        "id" : -1,
+        "name" : "position",
+        "dataTypeName" : "meta_data",
+        "fieldName" : ":position",
+        "position" : 0,
+        "renderTypeName" : "meta_data",
+        "format" : { },
+        "flags" : [ "hidden" ]
+      }, {
+        "id" : -1,
+        "name" : "created_at",
+        "dataTypeName" : "meta_data",
+        "fieldName" : ":created_at",
+        "position" : 0,
+        "renderTypeName" : "meta_data",
+        "format" : { },
+        "flags" : [ "hidden" ]
+      }, {
+        "id" : -1,
+        "name" : "created_meta",
+        "dataTypeName" : "meta_data",
+        "fieldName" : ":created_meta",
+        "position" : 0,
+        "renderTypeName" : "meta_data",
+        "format" : { },
+        "flags" : [ "hidden" ]
+      }, {
+        "id" : -1,
+        "name" : "updated_at",
+        "dataTypeName" : "meta_data",
+        "fieldName" : ":updated_at",
+        "position" : 0,
+        "renderTypeName" : "meta_data",
+        "format" : { },
+        "flags" : [ "hidden" ]
+      }, {
+        "id" : -1,
+        "name" : "updated_meta",
+        "dataTypeName" : "meta_data",
+        "fieldName" : ":updated_meta",
+        "position" : 0,
+        "renderTypeName" : "meta_data",
+        "format" : { },
+        "flags" : [ "hidden" ]
+      }, {
+        "id" : -1,
+        "name" : "meta",
+        "dataTypeName" : "meta_data",
+        "fieldName" : ":meta",
+        "position" : 0,
+        "renderTypeName" : "meta_data",
+        "format" : { },
+        "flags" : [ "hidden" ]
+      }, {
+        "id" : 213865745,
+        "name" : "name",
+        "dataTypeName" : "text",
+        "fieldName" : "name",
+        "position" : 1,
+        "renderTypeName" : "text",
+        "tableColumnId" : 27309213,
+        "width" : 148,
+        "cachedContents" : {
+          "non_null" : 45716,
+          "largest" : "Łowicz",
+          "null" : 0,
+          "top" : [ {
+            "item" : "Zulu Queen",
+            "count" : 20
+          } ],
+          "smallest" : "Aachen"
+        },
+        "format" : { }
+      }, {
+        "id" : 213865751,
+        "name" : "id",
+        "dataTypeName" : "text",
+        "fieldName" : "id",
+        "position" : 2,
+        "renderTypeName" : "text",
+        "tableColumnId" : 27309219,
+        "width" : 124,
+        "cachedContents" : {
+          "non_null" : 45716,
+          "largest" : "9999",
+          "null" : 0,
+          "top" : [ {
+            "item" : "30414",
+            "count" : 20
+          } ],
+          "smallest" : "1"
+        },
+        "format" : { }
+      }, {
+        "id" : 213865746,
+        "name" : "nametype",
+        "dataTypeName" : "text",
+        "fieldName" : "nametype",
+        "position" : 3,
+        "renderTypeName" : "text",
+        "tableColumnId" : 27309214,
+        "width" : 196,
+        "cachedContents" : {
+          "non_null" : 45716,
+          "largest" : "Valid",
+          "null" : 0,
+          "top" : [ {
+            "item" : "Valid",
+            "count" : 20
+          }, {
+            "item" : "Relict",
+            "count" : 19
+          } ],
+          "smallest" : "Relict"
+        },
+        "format" : { }
+      }, {
+        "id" : 213865747,
+        "name" : "recclass",
+        "dataTypeName" : "text",
+        "fieldName" : "recclass",
+        "position" : 4,
+        "renderTypeName" : "text",
+        "tableColumnId" : 27309215,
+        "width" : 196,
+        "cachedContents" : {
+          "non_null" : 45716,
+          "largest" : "Winonaite",
+          "null" : 0,
+          "top" : [ {
+            "item" : "L5",
+            "count" : 20
+          }, {
+            "item" : "H6",
+            "count" : 19
+          }, {
+            "item" : "L6",
+            "count" : 18
+          }, {
+            "item" : "H5",
+            "count" : 17
+          }, {
+            "item" : "H4",
+            "count" : 16
+          }, {
+            "item" : "LL6",
+            "count" : 15
+          }, {
+            "item" : "L4",
+            "count" : 14
+          }, {
+            "item" : "CM2",
+            "count" : 13
+          }, {
+            "item" : "L3",
+            "count" : 12
+          }, {
+            "item" : "H3",
+            "count" : 11
+          }, {
+            "item" : "LL5",
+            "count" : 10
+          }, {
+            "item" : "Ureilite",
+            "count" : 9
+          }, {
+            "item" : "Howardite",
+            "count" : 8
+          }, {
+            "item" : "CV3",
+            "count" : 7
+          }, {
+            "item" : "CO3",
+            "count" : 6
+          }, {
+            "item" : "Eucrite",
+            "count" : 5
+          }, {
+            "item" : "Iron, IIIAB",
+            "count" : 4
+          }, {
+            "item" : "EH3",
+            "count" : 3
+          }, {
+            "item" : "H4/5",
+            "count" : 2
+          }, {
+            "item" : "H~5",
+            "count" : 1
+          } ],
+          "smallest" : "Acapulcoite"
+        },
+        "format" : { }
+      }, {
+        "id" : 213865748,
+        "name" : "mass (g)",
+        "dataTypeName" : "number",
+        "description" : "Mass in grams",
+        "fieldName" : "mass",
+        "position" : 5,
+        "renderTypeName" : "number",
+        "tableColumnId" : 27309216,
+        "width" : 148,
+        "cachedContents" : {
+          "non_null" : 45585,
+          "average" : "13278.07854860151",
+          "largest" : "60000000",
+          "null" : 131,
+          "top" : [ {
+            "item" : "1440",
+            "count" : 20
+          }, {
+            "item" : "3500",
+            "count" : 19
+          }, {
+            "item" : "118400",
+            "count" : 18
+          }, {
+            "item" : "3800000",
+            "count" : 17
+          }, {
+            "item" : "218000",
+            "count" : 16
+          }, {
+            "item" : "140700",
+            "count" : 15
+          }, {
+            "item" : "3",
+            "count" : 14
+          }, {
+            "item" : "25.9",
+            "count" : 13
+          }, {
+            "item" : "200",
+            "count" : 12
+          }, {
+            "item" : "7600",
+            "count" : 11
+          }, {
+            "item" : "1000000",
+            "count" : 10
+          }, {
+            "item" : "6660",
+            "count" : 9
+          }, {
+            "item" : "3000",
+            "count" : 8
+          }, {
+            "item" : "300",
+            "count" : 7
+          }, {
+            "item" : "50000",
+            "count" : 6
+          }, {
+            "item" : "8680",
+            "count" : 5
+          }, {
+            "item" : "85000",
+            "count" : 4
+          }, {
+            "item" : "27.7",
+            "count" : 3
+          }, {
+            "item" : "162000",
+            "count" : 2
+          }, {
+            "item" : "6700",
+            "count" : 1
+          } ],
+          "smallest" : "0",
+          "sum" : "605281210.638000000000751570"
+        },
+        "format" : {
+          "precisionStyle" : "standard",
+          "noCommas" : "false",
+          "align" : "right"
+        }
+      }, {
+        "id" : 213865749,
+        "name" : "fall",
+        "dataTypeName" : "text",
+        "fieldName" : "fall",
+        "position" : 6,
+        "renderTypeName" : "text",
+        "tableColumnId" : 27309217,
+        "width" : 148,
+        "cachedContents" : {
+          "non_null" : 45716,
+          "largest" : "Found",
+          "null" : 0,
+          "top" : [ {
+            "item" : "Fell",
+            "count" : 20
+          }, {
+            "item" : "Found",
+            "count" : 19
+          } ],
+          "smallest" : "Fell"
+        },
+        "format" : { }
+      }, {
+        "id" : 213865750,
+        "name" : "year",
+        "dataTypeName" : "calendar_date",
+        "fieldName" : "year",
+        "position" : 7,
+        "renderTypeName" : "calendar_date",
+        "tableColumnId" : 27309218,
+        "width" : 148,
+        "cachedContents" : {
+          "non_null" : 45428,
+          "largest" : "-2500-01-01T00:00:00",
+          "null" : 288,
+          "top" : [ {
+            "item" : "1990-01-01T00:00:00",
+            "count" : 20
+          }, {
+            "item" : "1991-01-01T00:00:00",
+            "count" : 19
+          }, {
+            "item" : "1992-01-01T00:00:00",
+            "count" : 18
+          }, {
+            "item" : "2001-01-01T00:00:00",
+            "count" : 17
+          }, {
+            "item" : "2002-01-01T00:00:00",
+            "count" : 16
+          }, {
+            "item" : "2010-01-01T00:00:00",
+            "count" : 15
+          }, {
+            "item" : "1985-01-01T00:00:00",
+            "count" : 14
+          }, {
+            "item" : "1983-01-01T00:00:00",
+            "count" : 13
+          }, {
+            "item" : "1984-01-01T00:00:00",
+            "count" : 12
+          }, {
+            "item" : "1987-01-01T00:00:00",
+            "count" : 11
+          }, {
+            "item" : "1988-01-01T00:00:00",
+            "count" : 10
+          }, {
+            "item" : "1999-01-01T00:00:00",
+            "count" : 9
+          }, {
+            "item" : "1977-01-01T00:00:00",
+            "count" : 8
+          }, {
+            "item" : "1978-01-01T00:00:00",
+            "count" : 7
+          }, {
+            "item" : "1981-01-01T00:00:00",
+            "count" : 6
+          }, {
+            "item" : "1998-01-01T00:00:00",
+            "count" : 5
+          }, {
+            "item" : "2000-01-01T00:00:00",
+            "count" : 4
+          }, {
+            "item" : "2003-01-01T00:00:00",
+            "count" : 3
+          }, {
+            "item" : "2004-01-01T00:00:00",
+            "count" : 2
+          }, {
+            "item" : "2006-01-01T00:00:00",
+            "count" : 1
+          } ],
+          "smallest" : "-0300-01-01T00:00:00"
+        },
+        "format" : {
+          "view" : "date_y",
+          "align" : "left"
+        }
+      }, {
+        "id" : 213865752,
+        "name" : "reclat",
+        "dataTypeName" : "text",
+        "fieldName" : "reclat",
+        "position" : 8,
+        "renderTypeName" : "text",
+        "tableColumnId" : 27309220,
+        "width" : 172,
+        "cachedContents" : {
+          "non_null" : 38401,
+          "largest" : "9.916670",
+          "null" : 7315,
+          "top" : [ {
+            "item" : "-76.716670",
+            "count" : 20
+          }, {
+            "item" : "-72.000000",
+            "count" : 19
+          }, {
+            "item" : "0.000000",
+            "count" : 18
+          }, {
+            "item" : "-76.183330",
+            "count" : 17
+          }, {
+            "item" : "-86.366670",
+            "count" : 16
+          }, {
+            "item" : "-84.216670",
+            "count" : 15
+          }, {
+            "item" : "-79.683330",
+            "count" : 14
+          }, {
+            "item" : "-84.000000",
+            "count" : 13
+          }, {
+            "item" : "-71.500000",
+            "count" : 12
+          }, {
+            "item" : "-71.762500",
+            "count" : 11
+          }, {
+            "item" : "-71.833330",
+            "count" : 10
+          }, {
+            "item" : "-71.546940",
+            "count" : 9
+          }, {
+            "item" : "29.037000",
+            "count" : 8
+          } ],
+          "smallest" : "0.000000"
+        },
+        "format" : { }
+      }, {
+        "id" : 213865753,
+        "name" : "reclong",
+        "dataTypeName" : "text",
+        "fieldName" : "reclong",
+        "position" : 9,
+        "renderTypeName" : "text",
+        "tableColumnId" : 27309221,
+        "width" : 184,
+        "cachedContents" : {
+          "non_null" : 38401,
+          "largest" : "-99.995000",
+          "null" : 7315,
+          "top" : [ {
+            "item" : "159.666670",
+            "count" : 20
+          }, {
+            "item" : "26.000000",
+            "count" : 19
+          }, {
+            "item" : "0.000000",
+            "count" : 18
+          }, {
+            "item" : "157.166670",
+            "count" : 17
+          }, {
+            "item" : "-70.000000",
+            "count" : 16
+          }, {
+            "item" : "160.500000",
+            "count" : 15
+          }, {
+            "item" : "159.750000",
+            "count" : 14
+          }, {
+            "item" : "155.750000",
+            "count" : 13
+          }, {
+            "item" : "168.000000",
+            "count" : 12
+          }, {
+            "item" : "35.666670",
+            "count" : 11
+          }, {
+            "item" : "35.900000",
+            "count" : 10
+          }, {
+            "item" : "35.500000",
+            "count" : 9
+          }, {
+            "item" : "35.401940",
+            "count" : 8
+          }, {
+            "item" : "17.018500",
+            "count" : 7
+          }, {
+            "item" : "41.504600",
+            "count" : 6
+          }, {
+            "item" : "-115.683330",
+            "count" : 5
+          } ],
+          "smallest" : "0.000000"
+        },
+        "format" : { }
+      }, {
+        "id" : 213865754,
+        "name" : "GeoLocation",
+        "dataTypeName" : "location",
+        "fieldName" : "geolocation",
+        "position" : 10,
+        "renderTypeName" : "location",
+        "tableColumnId" : 27309222,
+        "width" : 232,
+        "format" : { },
+        "subColumnTypes" : [ "human_address", "latitude", "longitude", "machine_address", "needs_recoding" ]
+      }, {
+        "id" : 227885467,
+        "name" : "States",
+        "dataTypeName" : "number",
+        "fieldName" : ":@computed_region_cbhk_fwbd",
+        "position" : 15,
+        "renderTypeName" : "number",
+        "tableColumnId" : 32311653,
+        "computationStrategy" : {
+          "source_columns" : [ "geolocation" ],
+          "type" : "georegion_match_on_point",
+          "parameters" : {
+            "region" : "_cbhk-fwbd",
+            "primary_key" : "_feature_id"
+          }
+        },
+        "format" : { }
+      }, {
+        "id" : 227885469,
+        "name" : "Counties",
+        "dataTypeName" : "number",
+        "fieldName" : ":@computed_region_nnqa_25f4",
+        "position" : 16,
+        "renderTypeName" : "number",
+        "tableColumnId" : 32311655,
+        "computationStrategy" : {
+          "source_columns" : [ "geolocation" ],
+          "type" : "georegion_match_on_point",
+          "parameters" : {
+            "region" : "_nnqa-25f4",
+            "primary_key" : "_feature_id"
+          }
+        },
+        "format" : { }
+      } ],
+      "grants" : [ {
+        "inherited" : false,
+        "type" : "viewer",
+        "flags" : [ "public" ]
+      } ],
+      "metadata" : {
+        "rdfSubject" : "0",
+        "rdfClass" : "",
+        "custom_fields" : {
+          "Common Core" : {
+            "Program Code" : "026:009",
+            "Bureau Code" : "026:00"
+          }
+        },
+        "rowIdentifier" : "0",
+        "rowLabel" : "meteorite landings"
+      },
+      "owner" : {
+        "id" : "isxt-qkkm",
+        "displayName" : "nasa-data",
+        "profileImageUrlLarge" : "/api/users/isxt-qkkm/profile_images/LARGE",
+        "profileImageUrlMedium" : "/api/users/isxt-qkkm/profile_images/THUMB",
+        "profileImageUrlSmall" : "/api/users/isxt-qkkm/profile_images/TINY",
+        "screenName" : "nasa-data",
+        "type" : "interactive",
+        "flags" : [ "mayBeStoriesCoOwner" ]
+      },
+      "query" : { },
+      "rights" : [ "read" ],
+      "tableAuthor" : {
+        "id" : "isxt-qkkm",
+        "displayName" : "nasa-data",
+        "profileImageUrlLarge" : "/api/users/isxt-qkkm/profile_images/LARGE",
+        "profileImageUrlMedium" : "/api/users/isxt-qkkm/profile_images/THUMB",
+        "profileImageUrlSmall" : "/api/users/isxt-qkkm/profile_images/TINY",
+        "screenName" : "nasa-data",
+        "type" : "interactive",
+        "flags" : [ "mayBeStoriesCoOwner" ]
+      },
+      "tags" : [ "spaceapps", "outerspace", "airburstvisual", "intermediate", "model", "platform", "data visualization" ],
+      "flags" : [ "default", "restorable", "restorePossibleForType", "unsaved" ]
+    }
+  }
+}
