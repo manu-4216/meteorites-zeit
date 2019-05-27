@@ -7,7 +7,6 @@ const checkValidParam = ({ value, type, min, max, okValues = [] }) => {
   }
 
   if (type === 'NUMBER') {
-    // Check if it matches a number
     if (!/^-?\d+$/.test(value)) {
       return `The field value should be a number`;
     }

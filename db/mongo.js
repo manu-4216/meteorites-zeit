@@ -5,7 +5,6 @@ const checkValidationError = require('./utils/checkValidationError');
 const url = process.env.DB_URL_QUERY;
 const dbName = 'mydbname';
 const meteoritesCollectionName = 'meteorites';
-let validationError = '';
 
 const getConvertedQueryParams = ({ body }) => ({
   query: body.query.toLowerCase(),
@@ -16,18 +15,16 @@ const getConvertedQueryParams = ({ body }) => ({
 });
 
 const mongo = (req, res) => {
-  validationError = checkValidationError(req);
+  const validationError = checkValidationError(req);
   if (validationError) {
     res.status(400).json({
       field: validationError.field,
       error: validationError.error
     });
-  }
-
-  if (validationError) {
     console.log('Validation error!. Not continuing');
     return;
   }
+
   const convertedQueryParams = getConvertedQueryParams(req);
   const { query, isWordQuery, offset, limit, sort } = convertedQueryParams;
 
@@ -37,8 +34,7 @@ const mongo = (req, res) => {
     function(err, client) {
       if (err) {
         res.json({ error: err });
-        console.log('Error connecting to the db');
-        console.log(err);
+        console.log('Error connecting to the db', err);
         return;
       }
 
